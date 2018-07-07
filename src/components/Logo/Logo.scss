@@ -1,0 +1,15 @@
+.Logo {
+  padding: 8px;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex: 2;
+  @media screen and (min-width: 500px) {
+    justify-content: flex-start;
+  }
+  img {
+    height: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+.NavigationItem {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  a {
+    color: #333;
+    text-decoration: none;
+    width: 100%;
+    padding: 16px 10px;
+    box-sizing: border-box;
+    display: block;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+    &:hover, &:active, &.active {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .NavigationItem {
+    margin: 0;
+    display: flex;
+    width: auto;
+    height: 100%;
+    align-items: center;
+    a {
+      width: auto;
+      height: 100%;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+      &:hover, &:active, &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

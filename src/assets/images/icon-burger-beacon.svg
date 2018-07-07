@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.088 8.029">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f298b8;
+      }
+
+      .cls-2 {
+        fill: #dd6a56;
+      }
+    </style>
+  </defs>
+  <g id="bacon" transform="translate(-1 -40.956)">
+    <path id="Tracé_15" data-name="Tracé 15" class="cls-1" d="M97.895,250.7H11.712c-3.414,0-6.182,1.384-6.182,3.091v1.847c0,1.707,2.768,3.091,6.182,3.091H97.895c3.414,0,6.182-1.384,6.182-3.091v-1.847C104.077,252.079,101.309,250.7,97.895,250.7Z" transform="translate(-4.53 -209.739)"/>
+    <path id="Tracé_16" data-name="Tracé 16" class="cls-2" d="M8.82,250.7a3.2,3.2,0,0,0-3.29,3.091v1.847a3.2,3.2,0,0,0,3.29,3.091H28.243c-3.51-1.434-3.369-5.614-2.456-8.029Z" transform="translate(-4.442 -209.739)"/>
+    <path id="Tracé_152" data-name="Tracé 152" class="cls-2" d="M23.254,250.7a3.048,3.048,0,0,1,3,3.091v1.847a3.048,3.048,0,0,1-3,3.091H5.53c3.2-1.434,3.074-5.614,2.241-8.029Z" transform="translate(73.831 -209.739)"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-2" width="47" height="8" rx="4" transform="translate(27 40.971)"/>
+  </g>
+</svg>

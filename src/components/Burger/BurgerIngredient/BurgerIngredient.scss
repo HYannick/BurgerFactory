@@ -1,0 +1,54 @@
+.BreadBottom {
+  position: relative;
+  z-index: 30;
+}
+
+.BreadTop {
+  position: relative;
+  z-index: 30;
+  margin-bottom: -6px;
+}
+
+
+.Meat {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  img {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+  }
+}
+
+.Cheese {
+  position: relative;
+  z-index: 20;
+  height: 10px;
+  img {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.Salad {
+  position: relative;
+  z-index: 30;
+  height: 30px;
+  img {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+.Bacon {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  margin-bottom: -6px;
+  img {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+  }
+}
