@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+import {Redirect} from 'react-router-dom'
 import Input from '@/components/UI/Input'
 import Button from '@/components/UI/Button'
+import Spinner from '@/components/UI/Spinner'
 import classes from './Auth.scss'
 import * as actions from '@/store/actions'
 
@@ -83,7 +85,8 @@ class Auth extends Component {
       })
     }
 
-    const form = formElArray.map(
+
+    let form = formElArray.map(
       item => (
         <Input key={item.id}
                elementType={item.config.elementType}
@@ -94,24 +97,48 @@ class Auth extends Component {
                changed={(e) => this.inputChangedHandler(e, item.id)}/>
       )
     )
+
+    if (this.props.loading) {
+      form = <Spinner/>
+    }
+
+    let errorMessage = null
+
+    if(this.props.error) {
+      errorMessage = <p>{this.props.error.message}</p>
+    }
+    let authRedirect = null;
+    if(this.props.isAuth) {
+      authRedirect = <Redirect to="/"/>
+    }
+
     return (
-      <div className={classes.Auth} >
+      <div className={classes.Auth}>
+        {authRedirect}
+        {errorMessage}
         <form onSubmit={this.submitHandler}>
           {form}
           <Button btnType="Success">Submit</Button>
         </form>
         <Button btnType="Danger"
                 clicked={this.switchOfModeHandler}
-        >Switch to {this.state.isSignUp ? 'Signin': 'Signup'}</Button>
+        >Switch to {this.state.isSignUp ? 'Signin' : 'Signup'}</Button>
       </div>
     )
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    loading: state.auth.loading,
+    error: state.auth.error,
+    isAuth: state.auth.token !== null
+  }
+}
 const mapDispatchToProps = dispatch => {
   return {
-    onAuth: (email, password, isSignedUp) =>  dispatch(actions.auth(email, password, isSignedUp))
+    onAuth: (email, password, isSignedUp) => dispatch(actions.auth(email, password, isSignedUp))
   }
 }
 
-export default connect(null, mapDispatchToProps)(Auth)
+export default connect(mapStateToProps, mapDispatchToProps)(Auth)

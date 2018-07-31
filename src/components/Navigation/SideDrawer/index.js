@@ -4,7 +4,7 @@ import NavigationItems from '@/components/Navigation/NavigationItems'
 import Backdrop from '@/components/UI/Backdrop'
 import classes from './SideDrawer.scss'
 
-const sideDrawer = ({closed, open}) => {
+const sideDrawer = ({closed, open, isAuth}) => {
   let attachedClasses = [classes.SideDrawer, classes.Close]
   if(open) {
     attachedClasses = [classes.SideDrawer, classes.Open]
@@ -14,7 +14,7 @@ const sideDrawer = ({closed, open}) => {
       <Backdrop show={open} clicked={closed}/>
       <div className={attachedClasses.join(' ')}>
         <Logo height="10%"/>
-        <NavigationItems/>
+        <NavigationItems isAuth={isAuth}/>
       </div>
     </Fragment>
   )
